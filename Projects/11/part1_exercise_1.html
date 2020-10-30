@@ -1,0 +1,37 @@
+
+<html>
+    <head>
+     <meta charset="utf-8" />
+     <title></title>
+    </head>
+    <body>
+    
+    <h1>Mad Libs</h1>
+    
+    <ul>
+     <li>Noun: <input type="text" id="noun">
+     <li>Adjective: <input type="text" id="adjective">
+     <li>Someone's Name: <input type="text" id="person">
+    </ul>
+    
+    <button id="lib-button">Lib it!</button>
+     
+    <div id="story"></div>
+
+     <script>
+         let button = document.getElementById("lib-button");
+
+button.addEventListener("click", function () {
+  let noun = document.getElementById("noun").value;
+  let adjective = document.getElementById("adjective").value;
+  let person = document.getElementById("person").value;
+  let crazyStory = document.getElementById("story");
+   crazyStory.innerHTML = person + " loves much" + adjective + " " + noun;
+});
+  // Adicione uma tag de script ao final da página para seu código.
+  // Adicione um ouvinte de evento ao botão para que ele chame uma função makeMadLib quando clicado.
+  // Na função makeMadLib, recupere os valores atuais dos elementos de entrada do formulário,
+  // faça uma história com eles e envie-a para a div da história
+     </script>
+    </body>
+   </html>

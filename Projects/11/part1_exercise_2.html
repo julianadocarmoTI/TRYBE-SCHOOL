@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+
+let buttonSquare = document.getElementById("square-button");
+      buttonSquare.addEventListener("click", function () {
+          let num = document.getElementById("square-input").value;
+          document.getElementById("solution").innerHTML = squareNumber(num);
+          
+      });
+
+      function squareNumber(num) {
+      let squaredNum = num * num;
+      alert('The result of squaring the number ' + num + ' is ' + squaredNum);
+      return squaredNum ;
+}
+
+let buttonHalf = document.getElementById("half-button");
+      buttonHalf.addEventListener("click", function () {
+          let num = document.getElementById("half-input").value;
+          document.getElementById("solution").innerHTML = halfNumber(num);
+          
+      });
+
+      function halfNumber(num) {
+      let halfNum = num / 2;
+      alert('Half of ' + num + ' is ' +  halfNum);
+      return halfNum   ;
+}
+
+let percentButton = document.getElementById("percent-button");
+      percentButton.addEventListener("click", function () {
+          let num1 = document.getElementById("percent1-input").value;
+          let num2 = document.getElementById("percent2-input").value;
+          document.getElementById("solution").innerHTML = percentOf(num1,num2);
+          
+      });
+
+      function percentOf(num1,num2) {
+      let percent = (num1 / num2) * 100;
+      alert(num1 + ' is ' + percent + '% of ' + num2);
+      return percent + "%" ;
+}
+
+let buttonArea = document.getElementById("area-button");
+      buttonArea.addEventListener("click", function () {
+          let num = document.getElementById("area-input").value;
+          document.getElementById("solution").innerHTML = areaOfCircle(num);
+          
+      });
+
+      function areaOfCircle(radius) {
+      let areaCir = Math.PI * (radius * radius);
+      alert('The area of circle with radius ' + radius + ' is ' + areaCir);
+      return areaCir ;
+}
+
+         document.getElementById("area-input").style.backgroundColor = "orange";
+                   
+
+
+// * Adicione uma tag de script e adicione as funções do exercício da calculadora 
+// * Para cada operação, crie um ouvinte de evento para o botão e, quando ele for clicado, 
+//   encontre o valor da entrada apropriada e mostre o resultado do cálculo na solução div.
+// * Bônus: responde aos pressionamentos de tecla para que o usuário não precise clicar no botão.
+
+     </script>
+  </script>
+</body>
+
+</html>
+
+<!-- Escreva uma função chamada squareNumberque terá um argumento (um número), quadrará esse número e retornará o resultado. Ele também deve registrar uma string como "O resultado da quadratura do número 3 é 9."
+Escreva uma função chamada halfNumberque terá um argumento (um número), divida-o por 2 e retorne o resultado. Ele também deve registrar uma string como "Metade de 5 é 2,5.".
+Escreva uma função chamada percentOfque terá dois números, descubra qual a porcentagem que o primeiro número representa do segundo número e retorne o resultado. Ele também deve registrar uma string como "2 é 50% de 4."
+Escreva uma função chamada areaOfCircleque terá um argumento (o raio), calcule a área com base nisso e retorne o resultado. Ele também deve registrar uma string como "A área de um círculo com raio 2 é 12,566370614359172".
+Bônus: arredonde o resultado para que haja apenas dois dígitos após o decimal.
+Escreva uma função que terá um argumento (um número) e execute as seguintes operações, usando as funções que você escreveu anteriormente1:
+Pegue metade do número e armazene o resultado.
+Eleve o resultado do # 1 ao quadrado e armazene esse resultado.
+Calcule a área de um círculo com o resultado de # 2 como o raio (A = π r²).
+Calcule a porcentagem dessa área do resultado ao quadrado (# 3).-->
