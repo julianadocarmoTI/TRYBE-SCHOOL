@@ -19,8 +19,12 @@ const factorial = number => {
 }
 console.log(factorial(5))
 
-
 // Option 2
+
+const factorial = number => number > 1 ? number * factorial(number - 1) : 1
+console.log(factorial(5))
+
+// Option 3
 function factorial(number) {
     if (number === 0 || number === 1) {
       return 1;
@@ -29,4 +33,5 @@ function factorial(number) {
       return (number*factorial(number-1));
     }
     }
-  console.log(factorial (4));
+  console.log(factorial (5));
+
