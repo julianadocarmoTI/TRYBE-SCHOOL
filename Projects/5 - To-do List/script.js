@@ -7,16 +7,15 @@ function addTarefa() {
   createListItem.innerHTML = inputText;
   createListItem.className = 'list-item';
   liTarefas.appendChild(createListItem);
-  document.getElementById('texto-tarefa').value = '';
 }
 buttonTarefas.addEventListener('click', addTarefa);
 
 // Gerar background-color
 liTarefas.addEventListener('click', function (event) {
-    const removeClass = document.querySelector('.selected');
-    if (removeClass !== null) {
-      removeClass.classList.remove('selected');
-    }
+  const removeClass = document.querySelector('.selected');
+  if (removeClass !== null) {
+    removeClass.classList.remove('selected');
+  } 
     const selectClass = event.target;
     selectClass.className += ' selected';
   });
@@ -24,7 +23,7 @@ liTarefas.addEventListener('click', function (event) {
   // Remove tudo
 const clearButton = document.getElementById('apaga-tudo');
 clearButton.addEventListener('click', function () {
-  while (liTarefas.firstChild) {
+  while (liTarefas) {
     liTarefas.removeChild(liTarefas.firstChild);
   }
 });
