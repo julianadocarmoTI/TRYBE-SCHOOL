@@ -5,9 +5,9 @@
 // Option 1
 const longestWord = text => {
 
-    let wordArray = text.split(' ')
-    let maxLength = 0
-    let result = ''
+    let wordArray = text.split(' ');
+    let maxLength = 0;
+    let result = '';
     
     for (const word of wordArray) {
         if (word.length > maxLength) {
@@ -18,10 +18,10 @@ const longestWord = text => {
     
     return result
     }
-    console.log(longestWord("Antonio foi no banheiro e não sabemos o que aconteceu"))
+    console.log(longestWord("Creio em Deus Pai todo poderoso"))
 
 
     // Option 2 - Longestword com sort em uma linha.
 
-const longestWord = text => text.split(' ').sort((wordA, wordB) => wordB.length - wordA.length)[0]
-console.log(longestWord("Antonio foi no banheiro e não sabemos o que aconteceu"))
+const lWord = text => text.split(' ').sort((wordA, wordB) => wordB.length - wordA.length)[0]
+console.log(lWord("Antonio foi no banheiro e não sabemos o que aconteceu"))
