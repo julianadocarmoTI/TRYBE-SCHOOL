@@ -70,7 +70,7 @@ function smallerName() {
   let nameBook;
   // escreva aqui o seu código
   books.forEach((element) => {
-    if (!nameBook || element.name.length < nameBook.length) {
+    if (!nameBook ||element.name.length < nameBook.length) {
       nameBook = element.name;
     }
   });
@@ -78,5 +78,5 @@ function smallerName() {
   // Variável nameBook que receberá o valor do menor nome;
   return nameBook;
 }
-console.log(na)
+console.log(smallerName());
 assert.strictEqual(smallerName(), 'Duna');
