@@ -26,3 +26,7 @@ assert.throws(() => {sum(4,'5')}); //Task 3
 assert.throws(() => {sum(4,'5')}, /^Error: parameters must be numbers$/); //Task 4
 
 console.log(sum(4,5));
+
+let numbers = [5, 1, 0, 200, 5, 10, 8, 7, 500, 35];
+numbers.sort((a, b) => a - b);
+console.log(numbers);

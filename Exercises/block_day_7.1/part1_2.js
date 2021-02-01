@@ -10,6 +10,7 @@ usar várias atribuições de elemento, e imprima na tela.
   }
    editInPlace(); */
 
+// Option 1
 const s = [5, 7, 2];
 function editInPlace() {
   'use strict';
@@ -19,3 +20,9 @@ s[2] = 7;
 }
 editInPlace();
 console.log(s);
+
+
+// Option 2 
+const sS = [5, 7, 2];
+sS.sort((a,b) => a - b);
+console.log(sS);

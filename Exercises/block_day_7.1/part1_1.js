@@ -1,29 +1,35 @@
-/* Corrija o código para que declarado na instrução if seja uma variável separada daquela declarada na iprimeira linha da função. Certifique-se de não usar a varpalavra - chave em nenhum lugar do código.
+/* 1) Faça as modificações necessárias na função para que o seu comportamento 
+respeite o escopo no qual cada variável foi declarada.
 
-Este exercício foi elaborado para ilustrar a diferença entre como vare as letpalavras - chave atribuem escopo à variável declarada. Ao programar uma função semelhante à usada neste exercício, geralmente é melhor usar nomes de variáveis ​​diferentes para evitar confusão.
+    Modifique a estrutura da função para que ela seja uma arrow function.
+    Modifique as concatenações para template literals.
+    Copie o código abaixo.
 
-function checkScope() {
-    'use strict';
-    let i = 'function scope';
-    if (true) {
-      let i = 'block scope';
-      console.log('Block scope i is: ', i);
-    }
-         i = 'function scope'
-    console.log('Function scope i is: ', i);
-    return i;
-  }
+          function testingScope(escopo) { 
+        if (escopo === true) { 
+          var ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+          ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
+          console.log(ifScope);
+        } else {
+          var elseScope = 'Não devo ser utilizada fora meu escopo (else)';
+          console.log(elseScope);
+        }
+        console.log(ifScope + ' o que estou fazendo aqui ? :O'); // Se necessário esta linha pode ser removida.
+      }
+
+      testingScope(true);
+
   */
 
-  function checkScope() {
-  'use strict'
-  let i = 'function scope'
-
-  if (true) {
-    let i = 'block scope'
-    console.log('Block scope i is: ', i)
+ const testingScope = escopo => { 
+  if (escopo === true) { 
+    let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+    ifScope = `${ifScope} ótimo, fui utilizada no escopo !`;
+    console.log(ifScope);
+  } else {
+    const elseScope = 'Não devo ser utilizada fora meu escopo (else)';
+    console.log(elseScope);
   }
-  i = 'function scope'
-  console.log('Function scope i is: ', i)
-  return i
 }
+
+testingScope(true);
