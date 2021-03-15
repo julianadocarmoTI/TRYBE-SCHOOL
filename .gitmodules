@@ -1,0 +1,3 @@
+[submodule "TRYBE-school"]
+	path = TRYBE-school
+	url = https://github.com/julianadocarmoTI/TRYBE-school.git
